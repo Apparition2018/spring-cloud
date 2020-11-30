@@ -84,6 +84,16 @@
 - Spring Cloud 服务发现
     1. spring-cloud-starter-netflix-eureka-server，spring-cloud-starter-netflix-eureka-client (Java)
     2. spring-cloud-starter-zookeeper-discovery (Java)
+        1. 启动 zookeeper 
+            - 下载 zookeeper
+            - 在 config/复制 zoo_sample.cfg 并重命名为 zoo.cfg
+                1. 修改 dataDir=D:\\git\\spring-cloud\\spring-cloud-discovery\\spring-cloud-zookeeper\\apache-zookeeper-3.6.2\\data
+                2. 添加 dataLogDir=D:\\git\\spring-cloud\\spring-cloud-discovery\\spring-cloud-zookeeper\\apache-zookeeper-3.6.2\\log
+                3. 添加 audit.enable=true
+            - 双击 bin/zkServer.cmd 启动
+        2. zookeeper 图形化界面 ZooInspector
+            - 下载 ZooInspector
+            - 在 bin 下 cmd 输入 java -jar -Dfile.encoding-UTF-8 zookeeper-dev-ZooInspector.jar
     3. spring-cloud-starter-consul-discovery (Go)
         - 下载 consul.exe，在 consul.exe 所在位置打开 cmd 输入启动命令 consul agent -dev
         - 网址输入 localhost:8500 打开 consul 客户端

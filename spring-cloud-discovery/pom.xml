@@ -16,6 +16,7 @@
     <modules>
         <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-eureka-student-service</module>
-        <module>spring-cloud-consul-student</module>
+        <module>spring-cloud-consul-student-service</module>
+        <module>spring-cloud-zookeeper-student-service</module>
     </modules>
 </project>
