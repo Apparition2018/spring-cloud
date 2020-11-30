@@ -17,6 +17,7 @@
     <modules>
         <module>spring-cloud-discovery</module>
         <module>spring-cloud-routing</module>
+        <module>spring-cloud-config</module>
     </modules>
 
     <properties>

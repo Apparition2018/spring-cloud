@@ -1,6 +1,9 @@
 # Spring Cloud
 
 ---
+## 参考网站
+1. [Spring Cloud](https://spring.io/projects/spring-cloud)
+---
 ## 问题
 1. [微服务与 SOA 之间差了一个ESB](https://blog.csdn.net/jdk2006/article/details/51695416)
 2. [分布式与集群的区别是什么？](https://www.zhihu.com/question/20004877)
@@ -20,35 +23,14 @@
 ---
 ## Spring Cloud 生态
 1. 服务注册与发现
-    1. eureka
-    2. consul
-    3. zookeeper
 2. 网关路由
-    1. zuul 1.x
-    2. zuul 2.x
-    3. gateway
-3. 服务调用
-    1. Ribbon
-    2. Feign
-    3. Hystrix
+3. 服务调用：Ribbon，Feign，Hystrix
 4. 链路监控中心
-    - 监控
-        1. actuator
-        2. admin
-    - 链路监控
-        1. sleuth
-        2. zipkin
-5. 消息中心
-    1. stream
-    2. bus
-6. 配置中心
-    1. git
-    2. svn
-    3. zookeeper
-7. 认证授权中心
-    1. Security
-    2. oauth
-    3. jwt
+    - 监控：actuator，admin
+    - 链路监控：sleuth，zipkin
+5. 消息中心：stream，bus
+6. 配置中心：git，svn，zookeeper
+7. 认证授权中心：security，oauth，jwt
 8. 缓存中心
 9. 文档中心：swagger
 ---
