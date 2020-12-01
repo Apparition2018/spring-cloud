@@ -21,38 +21,21 @@
     - 异构化
 4. 服务网格：Service Mesh
 ---
-## Spring Cloud 生态
-1. 服务注册与发现
-2. 网关路由
-3. 服务调用：Ribbon，Feign，Hystrix
-4. 链路监控中心
-    - 监控：actuator，admin
-    - 链路监控：sleuth，zipkin
-5. 消息中心：stream，bus
-6. 配置中心：git，svn，zookeeper
-7. 认证授权中心：security，oauth，jwt
-8. 缓存中心
-9. 文档中心：swagger
----
-## 网关路由
-- 使用场景：认证登录，授权，限流，日志，监控，减少客户端与服务的交互次数
-- 使用方案：
-    1. nginx: KONG，API Umbrella
-    2. Zuul
-    3. Spring Cloud gateway
-    4. Linkerd
-    5. 自研
-- Spring Cloud 网关路由
-    1. spring-cloud-starter-netflix-zuul: 同步阻塞网关
-        - 1.cpu密集型任务
-        - 2.简单操作的需求
-        - 3.开发简单的需求
-        - 4.实时请求高的
-    2. spring-cloud-starter-gateway: 异步非阻塞网关
-        - 1.io密集的任务
-        - 2.大请求或者大文件
-        - 3.队列的流式数据
-        - 4.超大量的连接
+## Spring Cloud
+- Spring Cloud 为开发者提供了在分布式系统中快速构建的工具，使用 Spring Cloud 的开发人员可以快速的启动服务或构建应用、同时能够快速和云平台资源进行对接
+- 五大功能：
+    - 服务发现：Netflix Eureka
+    - 客户端负载均衡：Netflix Ribbon
+    - 熔断器：Netflix Hystrix
+    - 网关路由：Netflix Zuul
+    - 分布式配置中心：Spring Cloud Config
+- 其它功能：
+    - 链路监控中心
+        - 监控：actuator，admin
+        - 链路监控：sleuth，zipkin
+    - 消息中心：stream，bus
+    - 认证授权中心：security
+    - 缓存，熔断，代理，控制总线，全局锁，leader 选举，分布式 session，集群状态，文档 ...
 ---
 ## 服务注册与发现
 - 作用：提供服务注册、目录和查找三大关键特性，和提供健康监控、多种查询、实时更新和高可用性等
@@ -81,4 +64,24 @@
     3. spring-cloud-starter-consul-discovery (Go)
         - 下载 consul.exe，在 consul.exe 所在位置打开 cmd 输入启动命令 consul agent -dev
         - 网址输入 localhost:8500 打开 consul 客户端
+---
+## 网关路由
+- 使用场景：认证登录，授权，限流，日志，监控，减少客户端与服务的交互次数
+- 使用方案：
+    1. nginx: KONG，API Umbrella
+    2. Zuul
+    3. Spring Cloud gateway
+    4. Linkerd
+    5. 自研
+- Spring Cloud 网关路由
+    1. spring-cloud-starter-netflix-zuul: 同步阻塞网关
+        - 1.cpu密集型任务
+        - 2.简单操作的需求
+        - 3.开发简单的需求
+        - 4.实时请求高的
+    2. spring-cloud-starter-gateway: 异步非阻塞网关
+        - 1.io密集的任务
+        - 2.大请求或者大文件
+        - 3.队列的流式数据
+        - 4.超大量的连接
 ---
