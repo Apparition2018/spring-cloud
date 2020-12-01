@@ -37,6 +37,16 @@
     - 认证授权中心：security
     - 缓存，熔断，代理，控制总线，全局锁，leader 选举，分布式 session，集群状态，文档 ...
 ---
+## Spring Cloud 启动流程分析
+<img alt="Spring Cloud 启动流程分析" src="https://img1.mukewang.com/5fc6704800015dd319201080.jpg" width="600"/>
+
+1. SpringApplication 初始化
+2. Initializer: 设置 Spring 所有 Initializer，搜索 jar 包下面所有的 META-INF/spring.factories 并加载 Initializer
+3. prepareContext: 将 environment 和 context 关联
+4. refreshContext:
+    - postProcessBeanFactory: 加载 auto configure 的地方
+5. afterRefresh:
+---
 ## 服务注册与发现
 - 作用：提供服务注册、目录和查找三大关键特性，和提供健康监控、多种查询、实时更新和高可用性等
 - 使用方案：
