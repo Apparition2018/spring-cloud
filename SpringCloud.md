@@ -24,11 +24,11 @@
 ## Spring Cloud
 - Spring Cloud 为开发者提供了在分布式系统中快速构建的工具，使用 Spring Cloud 的开发人员可以快速的启动服务或构建应用、同时能够快速和云平台资源进行对接
 - 五大功能：
-    - 服务发现：Netflix Eureka
-    - 客户端负载均衡：Netflix Ribbon
-    - 熔断器：Netflix Hystrix
-    - 网关路由：Netflix Zuul
-    - 分布式配置中心：Spring Cloud Config
+    1. 服务发现：Netflix Eureka
+    2. 客户端负载均衡：Netflix Ribbon
+    3. 熔断器：Netflix Hystrix
+    4. 网关路由：Netflix Zuul
+    5. 分布式配置中心：Spring Cloud Config
 - 其它功能：
     - 链路监控中心
         - 监控：actuator，admin
@@ -85,13 +85,13 @@
     5. 自研
 - Spring Cloud 网关路由
     1. spring-cloud-starter-netflix-zuul: 同步阻塞网关
-        - 1.cpu密集型任务
-        - 2.简单操作的需求
-        - 3.开发简单的需求
-        - 4.实时请求高的
+        - cpu密集型任务
+        - 简单操作的需求
+        - 开发简单的需求
+        - 实时请求高的
     2. spring-cloud-starter-gateway: 异步非阻塞网关
-        - 1.io密集的任务
-        - 2.大请求或者大文件
-        - 3.队列的流式数据
-        - 4.超大量的连接
+        - io密集的任务
+        - 大请求或者大文件
+        - 队列的流式数据
+        - 超大量的连接
 ---
