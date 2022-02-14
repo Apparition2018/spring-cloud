@@ -20,17 +20,11 @@ public class StudentServiceApp {
         SpringApplication.run(StudentServiceApp.class, args);
     }
 
-    /**
-     * http://localhost:8090/echoStudentName/david
-     */
     @RequestMapping("/echoStudentName/{name}")
     public String echoStudentName(@PathVariable("name") String name) {
         return "Hello " + name + "! Nice to meet you !";
     }
 
-    /**
-     * http://localhost:8090/getStudentDetail/david
-     */
     @RequestMapping("/getStudentDetail/{name}")
     public Student getStudentDetails(@PathVariable("name") String name) {
         return new Student(name, "sh", "www");
