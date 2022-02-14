@@ -13,8 +13,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-cloud-zuul</module>
-        <module>spring-cloud-student-service</module>
+        <module>spring-cloud-netflix-zuul</module>
         <module>spring-cloud-gateway</module>
+        <module>routing-service</module>
     </modules>
 </project>

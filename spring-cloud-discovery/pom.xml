@@ -13,9 +13,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-cloud-eureka-server</module>
-        <module>spring-cloud-eureka-student-service</module>
-        <module>spring-cloud-consul-student-service</module>
-        <module>spring-cloud-zookeeper-student-service</module>
+        <module>spring-cloud-consul</module>
+        <module>spring-cloud-netflix-eureka</module>
+        <module>spring-cloud-zookeeper</module>
     </modules>
 </project>

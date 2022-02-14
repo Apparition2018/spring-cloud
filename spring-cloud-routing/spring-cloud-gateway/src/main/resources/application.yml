@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: gateway
+  # 配置 routes
+  cloud:
+    gateway:
+      routes:
+        - predicates:
+            - Path=/student/**
+          filters:
+            - StripPrefix=1
+          uri: "http://localhost:8090/"

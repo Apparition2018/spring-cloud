@@ -53,12 +53,12 @@
 - 应用场景：认证登录，授权，限流，日志，监控，减少客户端与服务的交互次数
 - 使用方案：nginx(KONG, API Umbrella)、Zuul、Spring Cloud gateway、Linkerd
 - Spring Cloud 网关路由
-    1. spring-cloud-starter-netflix-zuul: 同步阻塞网关
+    1. spring-cloud-starter-netflix-zuul: zuul 1，同步阻塞网关
         - cpu密集型任务
         - 简单操作的需求
         - 开发简单的需求
         - 实时请求高的
-    2. spring-cloud-starter-gateway: 异步非阻塞网关
+    2. spring-cloud-starter-gateway: zuul 2，异步非阻塞网关
         - io密集的任务
         - 大请求或者大文件
         - 队列的流式数据
@@ -66,21 +66,10 @@
 ---
 ## 服务注册与发现
 - 作用：提供服务注册、目录和查找三大关键特性，和提供健康监控、多种查询、实时更新和高可用性等
-- 使用方案：eureka、consul、zookeeper、etcd、spotify、serf、apollo、nacos
+- 使用方案：eureka、consul、zookeeper、etcd、spotify、serf、apollo
 - CAP 原则：指的是在一个分布式系统中，一致性(Consistency)、可用性(Availability)、分区容错性(Partition tolerance)，最多只能同时实现两点，不可能三者兼顾。
 - Spring Cloud 服务发现
-    1. spring-cloud-starter-netflix-eureka-server，spring-cloud-starter-netflix-eureka-client (Java，侧重 Availability)
-    2. spring-cloud-starter-zookeeper-discovery (Java，侧重 Consistency)
-        1. 启动 zookeeper 
-            - 下载 zookeeper
-            - 在 config/复制 zoo_sample.cfg 并重命名为 zoo.cfg
-                1. 修改 dataDir=D:\\git\\spring-cloud\\spring-cloud-discovery\\spring-cloud-zookeeper\\apache-zookeeper-3.6.2\\data
-                2. 添加 dataLogDir=D:\\git\\spring-cloud\\spring-cloud-discovery\\spring-cloud-zookeeper\\apache-zookeeper-3.6.2\\log
-                3. 添加 audit.enable=true
-        2. zookeeper 图形化界面 ZooInspector
-            - 下载 ZooInspector
-            - 在 bin 下 cmd 输入 java -jar -Dfile.encoding-UTF-8 zookeeper-dev-ZooInspector.jar
-    3. spring-cloud-starter-consul-discovery (Go)
-        - 下载 consul.exe，在 consul.exe 所在位置打开 cmd 输入启动命令 consul agent -dev
-        - 网址输入 localhost:8500 打开 consul 客户端
+    1. spring-cloud-netflix-eureka (Java，侧重 Availability)
+    2. spring-cloud-zookeeper (Java，侧重 Consistency)
+    3. spring-cloud-consul (Go)
 ---

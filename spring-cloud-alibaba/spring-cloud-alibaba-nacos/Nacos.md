@@ -8,7 +8,7 @@
 ## 安装
 - releases：https://github.com/alibaba/nacos/releases
 - 自定义数据库：默认为嵌入式数据库 derby
-    1. 修改 ${nacos_home}/conf/application.properties
+    1. 修改 ${Nacos_Home}/conf/application.properties
     ```properties
     spring.datasource.platform=mysql
     db.num=1
@@ -16,15 +16,15 @@
     db.user.0=root
     db.password.0=root
     ```
-    2. 新建数据库 nacos，执行 ${nacos_home}/conf/nacos-mysql.sql
-- 单体设置：修改 ${nacos_home}/bin/startup `set MODE="standalone"`
+    2. 新建数据库 nacos，执行 ${Nacos_Home}/conf/nacos-mysql.sql
+- 单体设置：修改 ${Nacos_Home}/bin/startup `set MODE="standalone"`
 - 集群设置：
-    1. 修改 ${nacos_home}/bin/startup `set MODE="cluster"`
-    2. 修改 ${nacos_home}/conf/application.properties
+    1. 修改 ${Nacos_Home}/bin/startup `set MODE="cluster"`
+    2. 修改 ${Nacos_Home}/conf/application.properties
         1. 端口：`server.port=8848`，`server.port=8849`，`server.port=8850`
         2. `nacos.inetutils.ip-address=127.0.0.1`
         3. 可设置个数据库：`db.num=3` ...
-    3. ${nacos_home}/conf/cluster.conf
+    3. ${Nacos_Home}/conf/cluster.conf
     ```
     127.0.0.1:8848
     127.0.0.1:8849
@@ -48,14 +48,14 @@
     1. Namespace：默认空字符串，公共 Namespace 名称为 public
     2. Group：默认 DEFAULT_GROUP
     3. Data ID
-1. 依赖：
+1. 依赖
 ```
 <dependency>
     <groupId>com.alibaba.cloud</groupId>
     <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
 </dependency>
 ```
-2. 客户端
+2. GUI
     1. 新命名空间：命名空间 → 新建命名空间
     ```
     命名空间名：dev
@@ -101,14 +101,15 @@
 ## 服务注册与发现
 - 服务实体关系模型  
 <img alt="Service Entity Relationship Model" src="https://cdn.nlark.com/yuque/0/2019/jpeg/338441/1561217924697-ba504a35-129f-4fc6-b0df-1130b995375a.jpeg" width="600">
-1. 依赖：
+1. 依赖
 ```
 <dependency>
     <groupId>com.alibaba.cloud</groupId>
     <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 </dependency>
 ```
-2. application.properties
+2. `@EnableDiscoveryClient`
+3. application.properties
 ```properties
 spring.application.name=order-service
 spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850
@@ -120,9 +121,9 @@ spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848,127.0.0.1:8849,127.0.0.1
 spring.cloud.nacos.discovery.namespace=89dc3a33-a0d7-4970-8589-7e37a6e3302d
 spring.cloud.nacos.discovery.cluster-name=stock
 ```
-3. `@EnableDiscoveryClient`
 4. Feign
-    1. com.ljh.feign.FeignService
+    1. `@EnableFeignClients("com.ljh.feign")`
+    2. com.ljh.feign.FeignService
     ```java
     @FeignClient("stock-service")
     public interface FeignService {
@@ -130,7 +131,6 @@ spring.cloud.nacos.discovery.cluster-name=stock
         String test(@RequestParam("info") String info);
     }
     ```
-    2. `@EnableFeignClients("com.ljh.feign")`
 ---
 ## [概念](https://nacos.io/zh-cn/docs/concepts.html)
 |英|中|说明|
