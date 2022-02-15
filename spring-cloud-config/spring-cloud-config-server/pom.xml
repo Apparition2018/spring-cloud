@@ -6,7 +6,6 @@
         <groupId>com.ljh</groupId>
         <artifactId>spring-cloud-config</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/>
     </parent>
     <artifactId>spring-cloud-config-server</artifactId>
 

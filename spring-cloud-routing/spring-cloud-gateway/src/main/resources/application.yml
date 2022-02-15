@@ -9,4 +9,4 @@ spring:
             - Path=/student/**
           filters:
             - StripPrefix=1
-          uri: "http://localhost:8090/"
+          uri: "http://localhost:8010/"

@@ -3,6 +3,8 @@
 ---
 ## 参考网站
 1. [Spring Cloud Gateway](https://cloud.spring.io/spring-cloud-gateway/reference/html/)
+2. [Spring Cloud Gateway | Github](https://github.com/spring-cloud/spring-cloud-gateway)
+3. [Spring Cloud Gateway | Baeldung](https://www.baeldung.com/?s=Spring+Cloud+Gateway)
 ---
 ## 使用
 1. 依赖：注意与 org.springframework.boot:spring-boot-starter-web 冲突
@@ -23,7 +25,7 @@
                 - Path=/student/**
               filters:
                 - StripPrefix=1
-              uri: "http://localhost:8090/"
+              uri: "http://localhost:8010/"
     ```
     2. ConfigBean
     ```java
@@ -33,7 +35,7 @@
         return builder.routes()
                 .route(r -> r.path("/student/**")
                         .filters(f -> f.stripPrefix(1))
-                        .uri("http://localhost:8090/")
+                        .uri("http://localhost:8010/")
                 )
                 .build();
         }

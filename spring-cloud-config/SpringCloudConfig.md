@@ -3,9 +3,10 @@
 ---
 ## 参考网站
 1. [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/reference/html/)
-2. [Quick Intro to Spring Cloud Configuration | Baeldung](https://www.baeldung.com/spring-cloud-configuration)
-3. [Spring Cloud Config | 风的姿态](https://www.cnblogs.com/fengzheng/p/11242128.html)
-4. [应用SpringCloud完成自定义配置中心开发实践](https://www.imooc.com/learn/1135)
+2. [Spring Cloud Config | Github](https://github.com/spring-cloud/spring-cloud-config)
+3. [Spring Cloud Config | Baeldung](https://www.baeldung.com/?s=Spring+Cloud+Config)
+4. [Spring Cloud Config | 风的姿态](https://www.cnblogs.com/fengzheng/p/11242128.html)
+5. [应用SpringCloud完成自定义配置中心开发实践](https://www.imooc.com/learn/1135)
 ---
 ## 配置服务器
 1. 依赖
@@ -19,14 +20,14 @@
 3. application.properties
     - 本地
     ```properties
-    server.port=8081
+    server.port=8001
     spring.application.name=config-server
     spring.profiles.active=native
     spring.cloud.config.server.native.search-locations=D:/Liang/git/spring-cloud/spring-cloud-config/config
     ```
     - git
     ```properties
-    server.port=8081
+    server.port=8001
     spring.application.name=config-server
     spring.cloud.config.server.git.uri=https://gitee.com/Apparition2018/config.git
     spring.cloud.config.server.git.clone-on-start=true
@@ -58,7 +59,7 @@
 # 配置文件名称=${spring.application.name}-${spring.cloud.config.profile}，即：config-client-dev
 spring.application.name=config-client
 spring.cloud.config.profile=dev
-spring.cloud.config.uri=http://localhost:8081
+spring.cloud.config.uri=http://localhost:8001
 # git
 spring.cloud.config.label=master
 ```

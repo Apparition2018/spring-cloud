@@ -3,10 +3,22 @@
 ---
 ## 参考网站
 1. [Nacos](https://nacos.io/zh-cn/docs/quick-start.html)
-2. [Nacos 视频教程](https://www.bilibili.com/video/BV1WZ4y1w7ww)
+2. [Nacos | Github](https://github.com/alibaba/nacos)
+3. [Nacos Group | GitHub](https://github.com/nacos-group)
+4. [Nacos 视频教程](https://www.bilibili.com/video/BV1WZ4y1w7ww)
+---
+## [Features](https://nacos.io/zh-cn/docs/feature-list.html)
+1. 服务发现：服务注册与发现、健康检查、路由策略
+2. 配置管理：配置管理、灰度配置、加密配置
+3. 元数据管理：对接第三方 CMDB
+4. 地址服务器：支持 Nacos 寻址
+5. 安全与稳定性：metrics 收集
+6. 客户端
+7. Nacos-Docker：Docker 部署 Nacos Server
+8. Nacos-Sync：与 Nacos、Zookeeper、Eureka、Consul 同步
 ---
 ## 安装
-- releases：https://github.com/alibaba/nacos/releases
+- [Releases](https://github.com/alibaba/nacos/releases)
 - 自定义数据库：默认为嵌入式数据库 derby
     1. 修改 ${Nacos_Home}/conf/application.properties
     ```properties
@@ -30,18 +42,7 @@
     127.0.0.1:8849
     127.0.0.1:8850
     ```
-- 地址：http://localhost:8848/nacos/index.html
-    - nacos/nacos
----
-## [Features](https://nacos.io/zh-cn/docs/feature-list.html)
-1. 服务发现：服务注册与发现、健康检查、路由策略
-2. 配置管理：配置管理、灰度配置、加密配置
-3. 元数据管理：对接第三方 CMDB
-4. 地址服务器：支持 Nacos 寻址
-5. 安全与稳定性：metrics 收集
-6. 客户端
-7. Nacos-Docker：Docker 部署 Nacos Server
-8. Nacos-Sync：与 Nacos、Zookeeper、Eureka、Consul 同步
+- 地址：`http://localhost:8848/nacos/index.html`，`nacos/nacos`
 ---
 ## 配置中心
 - Data Model  

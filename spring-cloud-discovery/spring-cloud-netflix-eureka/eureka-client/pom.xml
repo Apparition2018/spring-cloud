@@ -6,7 +6,6 @@
         <groupId>com.ljh</groupId>
         <artifactId>spring-cloud-netflix-eureka</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/>
     </parent>
     <artifactId>eureka-client</artifactId>
 

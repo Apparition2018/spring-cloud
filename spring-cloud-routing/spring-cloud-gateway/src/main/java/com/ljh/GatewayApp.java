@@ -29,7 +29,7 @@ public class GatewayApp {
         return builder.routes()
                 .route(r -> r.path("/student/**")
                         .filters(f -> f.stripPrefix(1))
-                        .uri("http://localhost:8090/")
+                        .uri("http://localhost:8010/")
                 )
                 .build();
     }

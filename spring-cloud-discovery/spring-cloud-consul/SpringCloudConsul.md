@@ -4,10 +4,10 @@
 ## 参考网站
 1. [Spring Cloud Consul](https://cloud.spring.io/spring-cloud-consul/reference/html/)
 2. [Spring Cloud Consul | Github](https://github.com/spring-cloud/spring-cloud-consul)
-3. [A Quick Guide to Spring Cloud Consul](https://www.baeldung.com/spring-cloud-consul)
+3. [A Quick Guide to Spring Cloud Consul | Baeldung](https://www.baeldung.com/spring-cloud-consul)
 ---
-## Consul.exee
-- Download：https://www.consul.io/downloads
+## Consul.exe
+- [Download Consul](https://www.consul.io/downloads)
 - 命令航启动：`consul agent -dev`
 - GUI：`http://localhost:8500`
 ---

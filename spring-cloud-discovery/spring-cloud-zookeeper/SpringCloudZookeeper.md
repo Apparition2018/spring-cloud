@@ -4,10 +4,10 @@
 ## 参考网站
 1. [Spring Cloud Zookeeper](https://spring.io/projects/spring-cloud-zookeeper)
 2. [Spring Cloud Zookeeper | Github](https://github.com/spring-cloud/spring-cloud-zookeeper)
-3. [An Intro to Spring Cloud Zookeeper](https://www.baeldung.com/spring-cloud-zookeeper)
+3. [An Intro to Spring Cloud Zookeeper | Baeldung](https://www.baeldung.com/spring-cloud-zookeeper)
 ---
 ## 安装 Zookeeper
-- releases：https://zookeeper.apache.org/releases.html
+- [Apache ZooKeeper™ Releases](https://zookeeper.apache.org/releases.html)
 - ${Zookeeper_Home}/conf/zoo.cfg
 ```
 dataDir=C:\\Users\\Administrator\\Desktop\\data
@@ -16,10 +16,9 @@ audit.enable=true
 ```
 ---
 ## ZooInspector
-- Zookeeper GUI
-- Download：https://issues.apache.org/jira/secure/attachment/12436620/ZooInspect
+- [Download](https://issues.apache.org/jira/secure/attachment/12436620/ZooInspect)
 - ${ZooInspector_Home}/build: `java -Dfile.encoding=UTF-8 -jar zookeeper-dev-ZooInspector.jar`
-- 左上角绿色箭头 → OK
+- 左上角绿色箭头 → Connect String → OK
 ---
 ## 使用
 1. 依赖
