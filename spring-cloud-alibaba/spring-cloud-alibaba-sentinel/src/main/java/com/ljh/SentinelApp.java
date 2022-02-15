@@ -14,10 +14,10 @@ import org.springframework.scheduling.annotation.EnableAsync;
  */
 @EnableAsync
 @SpringBootApplication
-public class SentinelDemoApp {
+public class SentinelApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(SentinelDemoApp.class);
+        SpringApplication.run(SentinelApp.class);
     }
 
     @Bean

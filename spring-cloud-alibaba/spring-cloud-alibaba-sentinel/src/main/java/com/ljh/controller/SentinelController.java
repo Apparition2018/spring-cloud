@@ -1,5 +1,6 @@
 package com.ljh.controller;
 
+import com.alibaba.csp.sentinel.AsyncEntry;
 import com.alibaba.csp.sentinel.Entry;
 import com.alibaba.csp.sentinel.SphO;
 import com.alibaba.csp.sentinel.SphU;
@@ -8,6 +9,8 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,29 +20,37 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
- * DemoController
+ * SentinelController
  *
  * @author ljh
  * created on 2022/2/15 11:45
  */
 @RestController
-public class DemoController {
+public class SentinelController {
 
-    /**
-     * 自定义规则
-     */
-    @PostConstruct
-    public void initFlowRules() {
-        List<FlowRule> flowRuleList = new ArrayList<>();
-        FlowRule flowRule = new FlowRule();
-        flowRule.setResource("Hello");
-        flowRule.setGrade(RuleConstant.FLOW_GRADE_QPS)
-                .setCount(3);
-        flowRuleList.add(flowRule);
-        FlowRuleManager.loadRules(flowRuleList);
+    private final ApplicationContext applicationContext;
+
+    @Autowired
+    public SentinelController(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
     }
+
+//    /**
+//     * 自定义规则
+//     */
+//    @PostConstruct
+//    public void initFlowRules() {
+//        List<FlowRule> flowRuleList = new ArrayList<>();
+//        FlowRule flowRule = new FlowRule();
+//        flowRule.setResource("Hello");
+//        flowRule.setGrade(RuleConstant.FLOW_GRADE_QPS)
+//                .setCount(3);
+//        flowRuleList.add(flowRule);
+//        FlowRuleManager.loadRules(flowRuleList);
+//    }
 
     /**
      * 抛出异常方式
@@ -79,9 +90,37 @@ public class DemoController {
         return System.nanoTime() + ": Hello Annotation!";
     }
 
-    public String helloBlockHandler(BlockException ex) {
-        ex.printStackTrace();
+    public String helloBlockHandler(BlockException e) {
+        e.printStackTrace();
         return "系统繁忙，请稍后";
+    }
+
+    /**
+     * 异步调用
+     */
+    @GetMapping("hello4")
+    public void hello4() {
+        AsyncEntry asyncEntry = null;
+        try {
+            asyncEntry = SphU.asyncEntry("Hello");
+            applicationContext.getBean(SentinelController.class).doSomethingAsync();
+        } catch (BlockException e) {
+            System.out.println("系统繁忙，请稍后");
+        } finally {
+            if (asyncEntry != null) {
+                asyncEntry.exit();
+            }
+        }
+    }
+
+    public void doSomethingAsync() {
+        System.out.println("async start...");
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("async end...");
     }
 
     @GetMapping("test/{times}")

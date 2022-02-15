@@ -42,7 +42,7 @@
     127.0.0.1:8849
     127.0.0.1:8850
     ```
-- 地址：`http://localhost:8848/nacos/index.html`，`nacos/nacos`
+- 地址：`http://localhost:8848/nacos/index.html` ，`nacos/nacos`
 ---
 ## 配置中心
 - Data Model  

@@ -9,9 +9,15 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>spring-cloud-alibaba-sentinel</artifactId>
-    <packaging>pom</packaging>
 
-    <modules>
-        <module>sentinel-demo</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
+    </dependencies>
 </project>
