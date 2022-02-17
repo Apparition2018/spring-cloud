@@ -10,8 +10,8 @@
 ---
 ## Dashboard
 1. [Sentinel Releases](https://github.com/alibaba/Sentinel/releases)
-2. `java -Dserver.port=8801 -Dcsp.sentinel.dashboard.server=localhost:8801 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.8.3.jar`
-3. GUI：`http://localhost:8801`，`sentinel/sentinel`
+2. `java -Dserver.port=8858 -Dcsp.sentinel.dashboard.server=localhost:8858 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.8.3.jar`
+3. GUI：`http://localhost:8858`，`sentinel/sentinel`
 4. 依赖：
 ```
 <dependency>
@@ -20,7 +20,7 @@
 </dependency>
 ```
 5. Edit Configurations... → Configuration → Environment
-    - VM options: `-Dcsp.sentinel.dashboard.server=localhost:8801 -Dproject.name=sentinel`
+    - VM options: `-Dcsp.sentinel.dashboard.server=localhost:8858 -Dproject.name=sentinel`
 ---
 ## 基本使用
 - 依赖
@@ -183,7 +183,7 @@ spring.cloud.sentinel.datasource.ds.nacos.rule-type=flow
 2. application.properties
 ```properties
 spring.application.name=sentinel
-spring.cloud.sentinel.transport.dashboard=localhost:8801
+spring.cloud.sentinel.transport.dashboard=localhost:8858
 spring.cloud.sentinel.log.dir=logs/csp
 ```
 ---
