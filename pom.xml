@@ -17,15 +17,14 @@
 
     <properties>
         <java.version>8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.7.RELEASE</spring-cloud-alibaba.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -49,6 +48,15 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- spring-boot 2.4.0 之后删除了 ConfigurationBeanFactoryMetadata -->
+            <!-- https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -62,9 +70,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>
