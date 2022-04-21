@@ -20,8 +20,8 @@ import org.springframework.context.annotation.Bean;
 public class ZuulApp {
 
     /**
-     * http://localhost:8080/student/echoStudentName/david
-     * http://localhost:8080/student/getStudentDetail/david
+     * http://localhost:9302/student/echoStudentName/david
+     * http://localhost:9302/student/getStudentDetail/david
      */
     public static void main(String[] args) {
         SpringApplication.run(ZuulApp.class, args);

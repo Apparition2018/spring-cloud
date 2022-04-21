@@ -16,8 +16,8 @@ import org.springframework.context.annotation.Bean;
 public class GatewayApp {
 
     /**
-     * http://localhost:8080/student/echoStudentName/david
-     * http://localhost:8080/student/getStudentDetail/david
+     * http://localhost:9301/student/echoStudentName/david
+     * http://localhost:9301/student/getStudentDetail/david
      */
     public static void main(String[] args) {
         SpringApplication.run(GatewayApp.class, args);
@@ -29,7 +29,7 @@ public class GatewayApp {
         return builder.routes()
                 .route(r -> r.path("/student/**")
                         .filters(f -> f.stripPrefix(1))
-                        .uri("http://localhost:8010/")
+                        .uri("http://localhost:9300/")
                 )
                 .build();
     }

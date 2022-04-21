@@ -23,7 +23,7 @@
 >2. `@EnableEurekaServer`
 >3. application.properties
 >```properties
->server.port=8004
+>server.port=9201
 >eureka.instance.hostname=localhost
 >eureka.server.wait-time-in-ms-when-sync-empty=0
 ># 注册中心，不注册自己
@@ -31,9 +31,9 @@
 ># 注册中心，维护服务实例，不需要区检索服务
 >eureka.client.fetch-registry=false
 ># 默认服务注册中心地址，多个用","隔开
->eureka.client.service-url.default-zone=http://${eureka.instance.hostname}:8004/eureka
+>eureka.client.service-url.default-zone=http://${eureka.instance.hostname}:9201/eureka
 >```
->4. GUI：`http://localhost:8004`
+>4. GUI：`http://localhost:9201`
 >### 客户端
 >1. 依赖
 >```
@@ -57,7 +57,7 @@
 ># 当 server 90秒内没有收到 client 的注册信息时，会将该节点剔除
 >eureka.instance.lease-expiration-duration-in-seconds=10
 ># 默认服务注册中心地址，多个用","隔开
->eureka.client.service-url.default-zone=http://${eureka.instance.hostname}:8004/eureka
+>eureka.client.service-url.default-zone=http://${eureka.instance.hostname}:9201/eureka
 ># 需要 actuator
 >eureka.client.healthcheck.enabled=true
 >```
@@ -74,7 +74,7 @@
 3. application.properties
 ```properties
 spring.application.name=zuul
-zuul.routes.student.url=http://localhost:8010
+zuul.routes.student.url=http://localhost:9300
 ```
 3. 调用其它服务：`http://localhost:8080/student/echoStudentName/david`
 ---

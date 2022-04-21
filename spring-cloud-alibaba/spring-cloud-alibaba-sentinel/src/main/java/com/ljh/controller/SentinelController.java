@@ -128,7 +128,7 @@ public class SentinelController {
         if (times == null || times == 0) return;
         RestTemplate restTemplate = new RestTemplate();
         for (int i = 0; i < times; i++) {
-            ResponseEntity<String> forEntity = restTemplate.getForEntity("http://localhost:8080/hello", String.class);
+            ResponseEntity<String> forEntity = restTemplate.getForEntity("http://localhost:9004/hello", String.class);
             System.out.println(forEntity.getBody());
         }
     }

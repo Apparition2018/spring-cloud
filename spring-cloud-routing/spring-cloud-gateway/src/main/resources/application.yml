@@ -1,3 +1,6 @@
+server:
+  port: 9301
+
 spring:
   application:
     name: gateway
@@ -9,4 +12,4 @@ spring:
             - Path=/student/**
           filters:
             - StripPrefix=1
-          uri: "http://localhost:8010/"
+          uri: "http://localhost:9300/"

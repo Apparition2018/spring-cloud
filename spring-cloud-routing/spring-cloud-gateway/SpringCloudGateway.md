@@ -25,7 +25,7 @@
                 - Path=/student/**
               filters:
                 - StripPrefix=1
-              uri: "http://localhost:8010/"
+              uri: "http://localhost:9300/"
     ```
     2. ConfigBean
     ```java
@@ -35,7 +35,7 @@
         return builder.routes()
                 .route(r -> r.path("/student/**")
                         .filters(f -> f.stripPrefix(1))
-                        .uri("http://localhost:8010/")
+                        .uri("http://localhost:9300/")
                 )
                 .build();
         }

@@ -9,9 +9,24 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
+        <!-- spring-cloud-alibaba-nacos
+             9000：nacos-config
+             9001：nacos-order-service
+             9002：nacos-stock-service
+             9003：nacos-stock2-service -->
+        <!-- 9004：spring-cloud-alibaba-sentinel -->
         <module>spring-cloud-alibaba</module>
+        <!-- 9100：spring-cloud-config-client
+             9101：spring-cloud-config-server -->
         <module>spring-cloud-config</module>
+        <!-- 9200：spring-cloud-consul
+             9201：eureka-server
+             9202：eureka-client
+             9203：spring-cloud-zookeeper -->
         <module>spring-cloud-discovery</module>
+        <!-- 9300：routing-service
+             9301：spring-cloud-gateway
+             9302：spring-cloud-netflix-zuul -->
         <module>spring-cloud-routing</module>
     </modules>
 
