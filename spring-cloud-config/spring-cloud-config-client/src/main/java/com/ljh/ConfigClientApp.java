@@ -27,11 +27,17 @@ public class ConfigClientApp {
     @Resource
     private Guest guest;
 
+    /**
+     * http://localhost:9101/hello
+     */
     @GetMapping("hello")
     public String hello() {
         return "Hello, " + name;
     }
 
+    /**
+     * http://localhost:9101/hello2
+     */
     @GetMapping("hello2")
     public String hello2() {
         return "Hello, " + guest;

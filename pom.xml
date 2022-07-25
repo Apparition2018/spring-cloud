@@ -16,8 +16,8 @@
              9003：nacos-stock2-service -->
         <!-- 9004：spring-cloud-alibaba-sentinel -->
         <module>spring-cloud-alibaba</module>
-        <!-- 9100：spring-cloud-config-client
-             9101：spring-cloud-config-server -->
+        <!-- 9100：spring-cloud-config-server
+             9101：spring-cloud-config-client -->
         <module>spring-cloud-config</module>
         <!-- 9200：spring-cloud-consul
              9201：eureka-server
