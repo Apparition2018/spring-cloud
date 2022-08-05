@@ -44,7 +44,7 @@
     ```
 - 地址：`http://localhost:8848/nacos/index.html` ，`nacos/nacos`
 ---
-## 配置中心
+## [配置中心](https://spring-cloud-alibaba-group.github.io/github-pages/hoxton/zh-cn/index.html#_spring_cloud_alibaba_nacos_config)
 - Data Model  
     1. Namespace：默认空字符串，公共 Namespace 名称为 public
     2. Group：默认 DEFAULT_GROUP
@@ -99,7 +99,7 @@
     }
     ```
 ---
-## 服务注册与发现
+## [服务注册与发现](https://spring-cloud-alibaba-group.github.io/github-pages/hoxton/zh-cn/index.html#_spring_cloud_alibaba_nacos_discovery)
 - 服务实体关系模型  
 <img alt="Service Entity Relationship Model" src="https://cdn.nlark.com/yuque/0/2019/jpeg/338441/1561217924697-ba504a35-129f-4fc6-b0df-1130b995375a.jpeg" width="600">
 1. 依赖
@@ -134,31 +134,31 @@ spring.cloud.nacos.discovery.cluster-name=stock
     ```
 ---
 ## [概念](https://nacos.io/zh-cn/docs/concepts.html)
-|英|中|说明|
-|:---|:---|:---|
-|Region|区域|物理数据中心，资源创建后不能更改|
-|Available Zone|可用区||
-|Endpoint|端点| |
-|Namespace|命名空间|隔离租户配置。常见场景：区分开发、测试、生产环境|
-|Configuration|配置||
-|Configuration Management|配置管理|编辑、存储、分发、修改管理、发布版本管理、修改审计|
-|Configuration Item|配置项||
-|Configuration Set|配置集||
-|Data ID|数据 ID|配置集 ID，通常使用 Java 包的命名规则来确保全局唯一|
-|Group|分组|一组配置，名称默认 DEFAULT_GROUP|
-|Configuration Snapshot|配置快照||
-|Service|服务|一些预定义的接口，通过网络访问，提供给客户端的软件功能|
-|Service Name|服务名|服务标识符|
-|Service Registry|服务注册中心|服务实例数据库，服务负载均衡策略|
-|Service Discovery|||
-|Metadata|元数据|自定义配置信息，如：容灾策略、负载均衡策略、认证配置、标签等；<br/>从作用范围来看，分为服务级别元信息、虚拟集群元信息、实例元信息|
-|Naming Service|命名服务|将分布式系统中所有对象和实体的"names"映射到相关的元数据；<br/>两大场景：服务发现、DNS|
-|Configuration Service|配置服务|为其它服务喝应用提供动态配置、服务元数据、配置管理|
-|Application|应用||
-|Service Group|服务分组||
-|Virtual Cluster|虚拟集群||
-|Instance|实例||
-|Weight|权重||
-|Health Check|健康检查||
-|Protect Threshold|保护阈值||
+| 英                        | 中      | 说明                                                                  |
+|:-------------------------|:-------|:--------------------------------------------------------------------|
+| Region                   | 区域     | 物理数据中心，资源创建后不能更改                                                    |
+| Available Zone           | 可用区    ||
+| Endpoint                 | 端点     |                                                                     |
+| Namespace                | 命名空间   | 隔离租户配置。常见场景：区分开发、测试、生产环境                                            |
+| Configuration            | 配置     ||
+| Configuration Management | 配置管理   | 编辑、存储、分发、修改管理、发布版本管理、修改审计                                           |
+| Configuration Item       | 配置项    ||
+| Configuration Set        | 配置集    ||
+| Data ID                  | 数据 ID  | 配置集 ID，通常使用 Java 包的命名规则来确保全局唯一                                      |
+| Group                    | 分组     | 一组配置，名称默认 DEFAULT_GROUP                                             |
+| Configuration Snapshot   | 配置快照   ||
+| Service                  | 服务     | 一些预定义的接口，通过网络访问，提供给客户端的软件功能                                         |
+| Service Name             | 服务名    | 服务标识符                                                               |
+| Service Registry         | 服务注册中心 | 服务实例数据库，服务负载均衡策略                                                    |
+| Service Discovery        |        |                                                                     |
+| Metadata                 | 元数据    | 自定义配置信息，如：容灾策略、负载均衡策略、认证配置、标签等；<br/>从作用范围来看，分为服务级别元信息、虚拟集群元信息、实例元信息 |
+| Naming Service           | 命名服务   | 将分布式系统中所有对象和实体的"names"映射到相关的元数据；<br/>两大场景：服务发现、DNS                  |
+| Configuration Service    | 配置服务   | 为其它服务喝应用提供动态配置、服务元数据、配置管理                                           |
+| Application              | 应用     ||
+| Service Group            | 服务分组   ||
+| Virtual Cluster          | 虚拟集群   ||
+| Instance                 | 实例     ||
+| Weight                   | 权重     ||
+| Health Check             | 健康检查   ||
+| Protect Threshold        | 保护阈值   ||
 ---
