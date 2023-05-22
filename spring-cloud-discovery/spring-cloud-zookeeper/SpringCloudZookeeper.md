@@ -22,7 +22,7 @@ audit.enable=true
 ---
 ## 使用
 1. 依赖
-```
+```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>

@@ -10,7 +10,7 @@
 ---
 ## 配置服务器
 1. 依赖
-```
+```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-config-server</artifactId>
@@ -47,12 +47,11 @@
 ---
 ## 配置客户端
 1. 依赖
-```
+```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-config</artifactId>
 </dependency>
-
 ```
 2. bootstrap.properties
 ```properties

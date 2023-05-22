@@ -12,7 +12,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-cloud-netflix-zuul</module>
         <module>spring-cloud-gateway</module>
         <module>routing-service</module>
     </modules>

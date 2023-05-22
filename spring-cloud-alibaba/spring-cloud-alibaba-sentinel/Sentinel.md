@@ -13,7 +13,7 @@
 2. `java -Dserver.port=8858 -Dcsp.sentinel.dashboard.server=localhost:8858 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.8.3.jar`
 3. GUI：`http://localhost:8858`，`sentinel/sentinel`
 4. 依赖：
-```
+```xml
 <dependency>
     <groupId>com.alibaba.csp</groupId>
     <artifactId>sentinel-transport-simple-http</artifactId>
@@ -24,7 +24,7 @@
 ---
 ## 基本使用
 - 依赖
-```
+```xml
 <dependency>
     <groupId>com.alibaba.csp</groupId>
     <artifactId>sentinel-core</artifactId>
@@ -51,7 +51,7 @@ if (SphO.entry("resourceName")) {
 }
 ```
 4. 注解方式：`@SentinelResource`
-```
+```xml
 <dependency>
     <groupId>com.alibaba.csp</groupId>
     <artifactId>sentinel-annotation-aspectj</artifactId>
@@ -120,7 +120,7 @@ public class SentinelConfig {
 | limitApp | 不同 origin 用逗号分隔 ||
 5. [ParamFlowRule](https://sentinelguard.io/zh-cn/docs/parameter-flow-control.html) ：热点参数规则
 - 依赖
-```
+```xml
 <dependency>
     <groupId>com.alibaba.csp</groupId>
     <artifactId>sentinel-parameter-flow-control</artifactId>
@@ -143,7 +143,7 @@ public class SentinelConfig {
 ---
 ## 整合 Nacos
 1. 依赖
-```
+```xml
 <dependency>
     <groupId>com.alibaba.csp</groupId>
     <artifactId>sentinel-datasource-nacos</artifactId>
@@ -174,7 +174,7 @@ spring.cloud.sentinel.datasource.ds.nacos.rule-type=flow
 ```
 ## 整合 Spring Cloud
 1. 依赖
-```
+```xml
 <dependency>
     <groupId>com.alibaba.cloud</groupId>
     <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>

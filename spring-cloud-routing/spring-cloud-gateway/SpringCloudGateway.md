@@ -8,7 +8,7 @@
 ---
 ## 使用
 1. 依赖：注意与 org.springframework.boot:spring-boot-starter-web 冲突
-```
+```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-gateway</artifactId>

@@ -14,7 +14,7 @@
 ## Eureka
 ### 服务端
 1. 依赖
-```
+```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
@@ -36,15 +36,17 @@ eureka.client.service-url.default-zone=http://${eureka.instance.hostname}:9201/e
 4. GUI：`http://localhost:9201`
 ### 客户端
 1. 依赖
-```
-<dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-</dependency>
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-actuator</artifactId>
-</dependency>
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+</dependencies>
 ```
 2. `@EnableEurekaClient`
 3. application.properties
@@ -63,8 +65,9 @@ eureka.client.healthcheck.enabled=true
 ```
 ---
 ## Zuul
+- SpringCloud 2020 移除 Netflix OSS 相关组件
 1. 依赖
-```
+```xml
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
