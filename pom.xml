@@ -12,8 +12,7 @@
         <!-- spring-cloud-alibaba-nacos
              9000：nacos-config
              9001：nacos-order-service
-             9002：nacos-stock-service
-             9003：nacos-stock2-service -->
+             9002/9003：nacos-stock-service -->
         <!-- 9004：spring-cloud-alibaba-sentinel -->
         <module>spring-cloud-alibaba</module>
         <!-- 9100：spring-cloud-config-server
@@ -30,6 +29,7 @@
     </modules>
 
     <properties>
+        <!-- https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E -->
         <spring-boot.version>2.6.13</spring-boot.version>
         <spring-cloud.version>2021.0.5</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
@@ -59,7 +59,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
